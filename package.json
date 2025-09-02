@@ -1,6 +1,6 @@
 {
   "name": "stadia-tile-map",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -9,11 +9,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/repo.git"
+    "url": "git+https://github.com/sanjeevdg/stadia-tile-map.git"
   },
-  "homepage": "https://github.com/username/repo#readme",
+  "homepage": "https://github.com/sanjeevdg/stadia-tile-map#readme",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/sanjeevdg/stadia-tile-map/issues"
   },
   "peerDependencies": {
     "@maplibre/maplibre-gl-leaflet": "^0.1.3",
