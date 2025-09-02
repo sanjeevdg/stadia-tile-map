@@ -15962,7 +15962,7 @@ L$1.Icon.Default.mergeOptions({
     iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
     shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 });
-var STADIA_API_KEY = 'b1eaa277-afbb-4968-b2de-a804eb44d959';
+//const STADIA_API_KEY = 'b1eaa277-afbb-4968-b2de-a804eb44d959'
 // --- MapLibre wrapper ---
 var createMapLibreLayer = function (props, context) {
     var styleUrl = props.styleUrl, attribution = props.attribution, _a = props.interactive, interactive = _a === void 0 ? true : _a;
@@ -15997,11 +15997,11 @@ function AddMarkerOnClick(_a) {
 }
 //export const StadiaGeoJSONMapRemote: React.FC<Props> = ({ label  }) => {
 function StadiaGeoJSONMapRemote(_a) {
-    var geojsonUrl = _a.geojsonUrl;
+    var geojsonUrl = _a.geojsonUrl, stadia_api_key = _a.stadia_api_key;
     var center = React.useMemo(function () { return [37.8, -96]; }, []);
-    var rasterUrl = "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=".concat(STADIA_API_KEY);
+    var rasterUrl = "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=".concat(stadia_api_key);
     var attribution = "&copy; <a href='https://stadiamaps.com/'>Stadia Maps</a>, &copy; <a href='https://openmaptiles.org/'>OpenMapTiles</a> &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors";
-    var vectorStyle = "https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=".concat(STADIA_API_KEY);
+    var vectorStyle = "https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=".concat(stadia_api_key);
     var _b = React.useState(null), geojsonData = _b[0], setGeojsonData = _b[1];
     var _c = React.useState(true), loading = _c[0], setLoading = _c[1];
     var _d = React.useState(null), error = _d[0], setError = _d[1];

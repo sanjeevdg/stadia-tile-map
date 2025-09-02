@@ -27,7 +27,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 })
 
-const STADIA_API_KEY = 'b1eaa277-afbb-4968-b2de-a804eb44d959'
+//const STADIA_API_KEY = 'b1eaa277-afbb-4968-b2de-a804eb44d959'
 
 // --- MapLibre wrapper ---
 const createMapLibreLayer = (props: any, context: any) => {
@@ -94,14 +94,14 @@ type Props = {
     'https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json'
 
 //export const StadiaGeoJSONMapRemote: React.FC<Props> = ({ label  }) => {
-export default function StadiaGeoJSONMapRemote({geojsonUrl }) {
+export default function StadiaGeoJSONMapRemote({geojsonUrl, stadia_api_key }) {
 
   const center = useMemo<LatLngTuple>(() => [37.8, -96], [])
 
-  const rasterUrl = `https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=${STADIA_API_KEY}`
+  const rasterUrl = `https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png?api_key=${stadia_api_key}`
   const attribution =
     "&copy; <a href='https://stadiamaps.com/'>Stadia Maps</a>, &copy; <a href='https://openmaptiles.org/'>OpenMapTiles</a> &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-  const vectorStyle = `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${STADIA_API_KEY}`
+  const vectorStyle = `https://tiles.stadiamaps.com/styles/alidade_smooth.json?api_key=${stadia_api_key}`
 
   const [geojsonData, setGeojsonData] = useState<GeoJSONData | null>(null)
   const [loading, setLoading] = useState(true)
