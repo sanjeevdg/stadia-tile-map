@@ -1,13 +1,15 @@
-To install
+# Stadia tile map
 
-npm i stadia-tile-map
+## Usage
 
 import {StadiaGeoJSONMapRemote}   from "stadia-tile-map";
 
-Usage -
+**And in your render method return:**
 
-StadiaGeoJSONMapRemote geojsonUrl='https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json'
-stadia_api_key='YOUR-STADIA-API-KEY'
-place the component tag on the above
+&lt; StadiaGeoJSONMapRemote geojsonUrl='https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json'
+stadia_api_key='YOUR-STADIA-API-KEY' /&gt;  
+
+**You can use any geojson file.**
+
 
 ![alt text](https://github.com/sanjeevdg/stadia-tile-map/blob/main/stadia-tile-map.png?raw=true)
